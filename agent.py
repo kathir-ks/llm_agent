@@ -8,7 +8,12 @@ class Agent:
     self.history = self.history + "\"text\":" + system_message + "\"role\":\"user\""
 
   def __generate__(self, messages):
-    return self.model.generate_content(messages)
+
+    if self.name=="user":
+        inp = input("Waiting for user input")
+        return inp
+    else :
+        return self.model.generate_content(messages)
 
   def _start_(self, prompt):
 
@@ -16,9 +21,9 @@ class Agent:
 
     for i in range(self.max_iter):
       response = self.__generate__(self.history)
-      self.history = self.history + "\"text\":" + response.text + "\"role\":\"model\""
+      self.history = self.history + "\"text\":" + response + "\"role\":\"model\""
       print(response.text)
-      inp = input("Enter the next:")
+      inp = input("Waiting for user input:")
       if "exit" in inp:
         return
       else:

@@ -2,7 +2,7 @@ import google.generativeai as genai
 
 from agent import Agent
 
-GOOGLE_API_KEY = "AIzaSyCc4o3_ZNbpwLGisP1SRw_hQaWTzo0wavE"
+GOOGLE_API_KEY = ""
 
 genai.configure(api_key = GOOGLE_API_KEY)
 

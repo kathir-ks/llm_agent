@@ -48,7 +48,6 @@ group._run_conversation_("Start the process of building a neuron emitter", agent
 
 Got inspired from Autogen
 
-Feel free to contact me if you wish to contribute[Mail](mailto:kathirksw@gmail.com)
 
 
 
